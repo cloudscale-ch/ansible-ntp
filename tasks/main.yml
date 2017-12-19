@@ -2,7 +2,7 @@
 
 - name: Ensure that configuration is supported
   assert:
-    that: not ntp__daemon or ntp__daemon in [ 'ntpd', 'ntpdate', 'openntpd', 'systemd-timesyncd' ]
+    that: not ntp__daemon or ntp__daemon in [ 'chrony', 'ntpd', 'ntpdate', 'openntpd', 'systemd-timesyncd' ]
 
 - name: Install required packages
   apt:
